@@ -30,3 +30,32 @@ html {
     backface-visibility: hidden;
     perspective: 1000px;
 }
+
+.merlin-ai-card-gradient-border {
+    border: 1px solid transparent;
+    border-radius: 12px;
+    border-image-source: linear-gradient(266.38deg, rgba(255, 255, 255, 0.288) 13.33%, rgba(255, 255, 255, 0.16) 29.83%);
+    border-image-slice: 1;
+}
+
+.merlin-ai-container-mask {
+    mask-image: linear-gradient(to bottom, 
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 1) 60%,
+        rgba(255, 255, 255, 0.5) 85%, 
+        rgba(255, 255, 255, 0) 100%
+    );
+    mask-size: 100% 100%;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    
+    -webkit-mask-image: linear-gradient(to bottom, 
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 1) 60%,
+        rgba(255, 255, 255, 0.5) 85%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+}

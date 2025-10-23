@@ -1,18 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MoEngage Animations</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="/assets/js/SplitText.min.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body class="">
-        <main>
-            <section class="">
-            </section>
-        </main>
+    <main>
+        <section class="bg-gray-600 min-h-screen"></section>
+        <section class="bg-[#1A1A1A] min-h-screen overflow-clip">
+            <div class="lg:container mx-auto px-4 py-24">
+                <div class="relative w-[1068px] min-h-[557px] h-auto max-w-full">
+                    <img src="/assets/images/merlinai/merlin-ai-interface-left-three-dots.png"
+                        alt="merlin-ai-interface-left-three-dots"
+                        class="w-16 h-4 object-contain absolute top-7 left-7 z-40">
+                    <img src="/assets/images/merlinai/merlin-ai-interface-right-dots.png"
+                        alt="merlin-ai-interface-right-dots"
+                        class="w-[100px] h-[22px] object-contain absolute top-7 right-7 z-40">
+                    <div
+                        class="absolute left-0 -translate-x-[5%] top-0 -translate-y-[29%] w-[calc(100%_+_150px)] max-w-full">
+                        <img src="/assets/images/merlinai-dashboard-bg-light.png" alt="merlinai-dashboard-bg-light"
+                            class="w-full h-full max-w-[unset]">
+                    </div>
+                    <div
+                        class="merlin-ai-card-animation-container-trigger [mask-image:linear-gradient(to_bottom,rgba(255,255,255,1)_0%,rgba(255,255,255,1)_60%,rgba(255,255,255,0.5)_85%,rgba(255,255,255,0)_100%)] [mask-size:100%_100%] [mask-position:center] [mask-repeat:no-repeat] [-webkit-mask-image:linear-gradient(to_bottom,rgba(255,255,255,1)_0%,rgba(255,255,255,1)_60%,rgba(255,255,255,0.5)_85%,rgba(255,255,255,0)_100%)] [-webkit-mask-size:100%_100%] [-webkit-mask-position:center] [-webkit-mask-repeat:no-repeat]">
+                        <img src="/assets/images/merlinai/merlin-ai-interface.png" alt="merlin-ai-interface"
+                            class="w-full h-auto min-h-[650px] md:min-h-[557px] max-w-[unset]">
+                        <div
+                            class="absolute top-0 md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 mt-16 md:mt-10 w-[736px] max-w-full">
+                            <div class="flex justify-center w-full">
+                                <p
+                                    class="merlin-ai-card-animation-title-one text-white/90 text-book text-xl">
+                                    <span class="inline-flex items-center gap-2">
+                                        <span class="merlin-ai-title-one-text-before">What can</span>
+                                        <span class="merlin-ai-title-logo-one">
+                                            <img src="/assets/images/merlinai/merlin-ai-text.png" alt="merlin-ai-text"
+                                                class="w-[72px] h-4 object-contain">
+                                        </span>
+                                    </span>
+                                    <br class="md:hidden">
+                                    <span class="merlin-ai-title-one-text-after">do for you today?</span>
+                                </p>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-3 max-md:mx-4 justify-center gap-2 lg:gap-5 mt-7 h-auto min-h-[400px]">
+                                <div class="flex flex-row md:flex-col gap-2 lg:gap-5 merlin-ai-card-animation-column-1">
+                                    <div class="relative h-full merlin-ai-card-1">
+                                        <div class="absolute inset-[-2px] rounded-[13px] merlin-ai-card-border-highlight"></div>
+                                        <img src="/assets/images/merlinai/merlin-ai-card-bg-blur.png" alt="merlin-ai-card-bg-blur" class="absolute top-0 -left-6 w-6 h-20 max-w-[unset] merlin-ai-card-bg-blur">
+                                        <div class="border border-white/50 rounded-[12px] relative z-10 bg-[#201639] h-full">
+                                            <div class="p-3 md:py-5 md:px-4 flex flex-col h-full">
+                                                <img src="/assets/images/merlinai/merlin-ai-pen.svg" alt="merlin-ai-pen"
+                                                    class="size-5 md:size-[28px] object-contain">
+                                                <h4 class="text-white font-medium mt-3 md:mt-5 text-sm md:text-base">Copywriter</h4>
+                                                <p
+                                                    class="md:text-base text-sm max-w-[195px] text-balance mt-1 text-white/60">
+                                                    Generate engaging copy for campaigns in seconds</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="relative h-full merlin-ai-card-2">
+                                        <div class="absolute inset-[-2px] rounded-[13px] merlin-ai-card-border-highlight"></div>
+                                        <img src="/assets/images/merlinai/merlin-ai-card-bg-blur.png" alt="merlin-ai-card-bg-blur" class="absolute top-0 -left-6 w-6 h-20 max-w-[unset] merlin-ai-card-bg-blur">
+                                        <div class="border border-white/50 rounded-[12px] bg-[#201639] h-full z-10">
+                                            <div class="p-3 md:py-5 md:px-4 flex flex-col h-full">
+                                                <img src="/assets/images/merlinai/merlin-ai-jinja-icon.svg"
+                                                    alt="merlin-ai-jinja-icon" class="size-5 md:size-[28px] object-contain">
+                                                <h4 class="text-white font-medium mt-3 md:mt-5 text-sm md:text-base">JINJA Generator</h4>
+                                                <p
+                                                    class="md:text-base text-sm max-w-[195px] text-balance mt-1 text-white/60">
+                                                    Generate dynamic Jinja snippets for personalization</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-row md:flex-col gap-2 lg:gap-5 merlin-ai-card-animation-column-2">
+                                    <div class="relative h-full merlin-ai-card-3">
+                                        <div class="absolute inset-[-2px] rounded-[13px] merlin-ai-card-border-highlight"></div>
+                                        <img src="/assets/images/merlinai/merlin-ai-card-bg-blur.png" alt="merlin-ai-card-bg-blur" class="absolute top-0 -left-6 w-6 h-20 max-w-[unset] merlin-ai-card-bg-blur">
+                                        <div class="border border-white/50 rounded-[12px] bg-[#201639] h-full z-10">
+                                            <div class="p-3 md:py-5 md:px-4 flex flex-col h-full">
+                                                <img src="/assets/images/merlinai/merlin-ai-segment-assist.svg"
+                                                    alt="merlin-ai-segment-assist" class="size-5 md:size-[28px] object-contain">
+                                                <h4 class="text-white font-medium mt-3 md:mt-5 text-sm md:text-base">Segment Assist</h4>
+                                                <p
+                                                    class="md:text-base text-sm max-w-[195px] text-balance mt-1 text-white/60">
+                                                    Build audience segments with AI-powered insights</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="relative h-full merlin-ai-card-4">
+                                        <div class="absolute inset-[-2px] rounded-[13px] merlin-ai-card-border-highlight"></div>
+                                        <img src="/assets/images/merlinai/merlin-ai-card-bg-blur.png" alt="merlin-ai-card-bg-blur" class="absolute top-0 -left-6 w-6 h-20 max-w-[unset] merlin-ai-card-bg-blur">
+                                        <div class="border border-white/50 rounded-[12px] bg-[#201639] h-full z-10">
+                                            <div class="p-3 md:py-5 md:px-4 flex flex-col h-full">
+                                                <img src="/assets/images/merlinai/merlin-ai-in-app-gen-icon.svg"
+                                                    alt="merlin-ai-in-app-gen-icon" class="size-5 md:size-[28px] object-contain">
+                                                <h4 class="text-white font-medium mt-3 md:mt-5 text-sm md:text-base">In-App Generator</h4>
+                                                <p
+                                                    class="md:text-base text-sm max-w-[195px] text-balance mt-1 text-white/60">
+                                                    Design interactive in-app messages with ease</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-row md:flex-col gap-2 lg:gap-5 merlin-ai-card-animation-column-3">
+                                    <div class="relative h-full merlin-ai-card-5">
+                                        <div class="absolute inset-[-2px] rounded-[13px] merlin-ai-card-border-highlight"></div>
+                                        <img src="/assets/images/merlinai/merlin-ai-card-bg-blur.png" alt="merlin-ai-card-bg-blur" class="absolute top-0 -left-6 w-6 h-20 max-w-[unset] merlin-ai-card-bg-blur">
+                                        <div class="border border-white/50 rounded-[12px] bg-[#201639] h-full z-10">
+                                            <div class="p-3 md:py-5 md:px-4 flex flex-col h-full">
+                                                <img src="/assets/images/merlinai/merlin-ai-image-gen-icon.svg"
+                                                    alt="merlin-ai-image-gen-icon" class="size-5 md:size-[28px] object-contain">
+                                                <h4 class="text-white font-medium mt-3 md:mt-5 text-sm md:text-base">Image Generator</h4>
+                                                <p
+                                                    class="md:text-base text-sm max-w-[195px] text-balance mt-1 text-white/60">
+                                                    Generate engaging copy for campaigns in seconds</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="relative h-full merlin-ai-card-6">
+                                        <div class="absolute inset-[-2px] rounded-[13px] merlin-ai-card-border-highlight"></div>
+                                        <img src="/assets/images/merlinai/merlin-ai-card-bg-blur.png" alt="merlin-ai-card-bg-blur" class="absolute top-0 -left-6 w-6 h-20 max-w-[unset] merlin-ai-card-bg-blur">
+                                        <div class="border border-white/50 rounded-[12px] bg-[#201639] h-full z-10">
+                                            <div class="p-3 md:py-5 md:px-4 flex flex-col h-full">
+                                                <img src="/assets/images/merlinai/merlin-ai-flow-assist.svg"
+                                                    alt="merlin-ai-flow-assist-icon" class="size-5 md:size-[28px] object-contain">
+                                                <h4 class="text-white font-medium mt-3 md:mt-5 text-sm md:text-base">Flow Assist</h4>
+                                                <p
+                                                    class="md:text-base text-sm max-w-[195px] text-balance mt-1 text-white/60">
+                                                    Optimize journeys with intelligent flow suggestions</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Second Set of Cards -->
+                        <div
+                            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-10 w-[776px] h-auto min-h-[400px] max-w-full">
+                            <div class="flex justify-center w-full">
+                                <p
+                                    class="merlin-ai-card-animation-title-two text-white/90 text-book text-xl">
+                                    <span class="inline-flex items-center gap-2">
+                                        <span class="merlin-ai-title-two-text-before">Explore what</span>
+                                        <span class="merlin-ai-title-logo-two">
+                                            <img src="/assets/images/merlinai/merlin-ai-text.png" alt="merlin-ai-text"
+                                                class="w-[72px] h-4 object-contain">
+                                        </span>
+                                    </span>
+                                    <br class="md:hidden">
+                                    <span class="merlin-ai-title-two-text-after">can help you create.</span>
+                                </p>
+                            </div>
+                            <div class="grid grid-cols-2 md:grid-cols-3 gap-2 lg:gap-5 mt-7 pb-4 max-md:mx-4">
+                                <div class="row-span-2 gap-2 lg:gap-5 merlin-ai-grid-left-column merlin-ai-card-7">
+                                    <div class="relative h-full">
+                                        <div class="absolute inset-[-2px] rounded-[13px] merlin-ai-card-border-highlight"></div>
+                                        <img src="/assets/images/merlinai/merlin-ai-card-bg-blur.png" alt="merlin-ai-card-bg-blur" class="absolute top-0 -left-6 w-6 h-20 max-w-[unset] merlin-ai-card-bg-blur">
+                                        <div class="border border-white/50 rounded-[12px] h-full bg-[#201639]">
+                                            <div class="p-4 flex flex-col h-full">
+                                                <div class="flex gap-3 items-center">
+                                                    <img src="/assets/images/merlinai/merlin-ai-image-gen-icon.svg"
+                                                        alt="merlin-ai-pen" class="size-5 md:size-5 object-contain">
+                                                    <h4 class="text-white font-medium text-sm md:text-base">Image</h4>
+                                                </div>
+                                                <p
+                                                    class="text-sm md:text-base text-balance max-w-[195px] text-balance mt-1 text-white/60">
+                                                    A flat lay product shot of a new line of organic skincare products. The
+                                                    items are....</p>
+                                                <div class="aspect-[216/234] w-[216px] max-w-full mt-4">
+                                                    <img src="/assets/images/merlinai/merlin-ai-image-gen-card-img.png"
+                                                        alt="merlin-ai-image-gen-card-img"
+                                                        class="w-full h-full object-contain">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border border-white/50 rounded-[12px] merlin-ai-grid-top-right h-full bg-[#201639] merlin-ai-card-8">
+                                    <div class="relative h-full">
+                                        <div class="absolute inset-[-2px] rounded-[13px] merlin-ai-card-border-highlight"></div>
+                                        <img src="/assets/images/merlinai/merlin-ai-card-bg-blur.png" alt="merlin-ai-card-bg-blur" class="absolute top-0 -left-6 w-6 h-20 max-w-[unset] merlin-ai-card-bg-blur">
+                                        <div class="p-4 flex flex-col h-full">
+                                            <div class="flex gap-3 items-center">
+                                                <img src="/assets/images/merlinai/merlin-ai-pen.svg"
+                                                    alt="merlin-ai-copywriter-icon" class="size-5 md:size-5 object-contain">
+                                                <h4 class="text-white font-medium text-sm md:text-base">Copywriter</h4>
+                                            </div>
+                                            <p class="text-sm md:text-base text-balance max-w-[210px] text-balance mt-1 text-white/60">
+                                                Segment users who opened the app in the last 7 days...</p>
+                                            <div class="aspect-[220/62] w-[220px] max-w-full mt-2">
+                                                <img src="/assets/images/merlinai/black-friday-notification-card.png"
+                                                    alt="black-friday-notification-card"
+                                                    class="w-full h-full object-contain">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border border-white/50 rounded-[12px] merlin-ai-grid-bottom-right h-full bg-[#201639] merlin-ai-card-9">
+                                    <div class="relative h-full">
+                                        <div class="absolute inset-[-2px] rounded-[13px] merlin-ai-card-border-highlight"></div>
+                                        <img src="/assets/images/merlinai/merlin-ai-card-bg-blur.png" alt="merlin-ai-card-bg-blur" class="absolute top-0 -left-6 w-6 h-20 max-w-[unset] merlin-ai-card-bg-blur">
+                                        <div class="p-4 flex flex-col h-full relative overflow-hidden">
+                                            <div class="flex gap-3 items-center">
+                                                <img src="/assets/images/merlinai/merlin-ai-segment-assist.svg"
+                                                    alt="merlin-ai-segment-assist-icon" class="size-5 md:size-5 object-contain">
+                                                <h4 class="text-white font-medium text-sm md:text-base">Segment assist</h4>
+                                            </div>
+                                            <p class="text-sm md:text-base text-balance max-w-[110px] text-balance mt-1 text-white/60 relative z-50">
+                                                Segment users who opened the app in the last 7 days.</p>
+                                            <div
+                                                class="absolute -right-1/2 -bottom-[60%] aspect-square w-[258px] max-w-full">
+                                                <img src="/assets/images/merlinai/merlin-ai-segment-assist-card-image.png"
+                                                    alt="merlin-ai-segment-assist-card-image"
+                                                    class="w-full h-full object-contain">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-2 lg:gap-5 merlin-ai-grid-bottom-spanning col-span-2 bg-[#201639] merlin-ai-card-10">
+                                    <div class="relative h-full">
+                                        <div class="absolute inset-[-2px] rounded-[13px] merlin-ai-card-border-highlight"></div>
+                                        <img src="/assets/images/merlinai/merlin-ai-card-bg-blur.png" alt="merlin-ai-card-bg-blur" class="absolute top-0 -left-6 w-6 h-20 max-w-[unset] merlin-ai-card-bg-blur">
+                                        <div
+                                            class="border border-white/50 rounded-[12px] flex gap-x-6 justify-between p-4 h-full">
+                                            <div class="flex flex-col h-full max-w-[230px]">
+                                                <div class="flex gap-3 items-center">
+                                                    <img src="/assets/images/merlinai/merlin-ai-jinja-icon.svg"
+                                                        alt="jinja-code-editor-image" class="size-5 md:size-6 object-contain">
+                                                    <h4 class="text-white font-medium text-sm md:text-base">Jinja</h4>
+                                                </div>
+                                                <p class="text-sm md:text-base text-balance text-white/60 mt-4">Generate Jinja code to
+                                                    output the current time in the HH:MM:SS format in America/Vancouver
+                                                    timezone.</p>
+                                            </div>
+                                            <div class="aspect-[210/176] w-[210px] max-w-full">
+                                                <img src="/assets/images/merlinai/jinja-code-editor-image.png"
+                                                    alt="jinja-code-editor-image" class="w-full h-full object-contain">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-gray-600 min-h-screen"></section>
+    </main>
     <script src="script.js"></script>
 </body>
+
 </html>
