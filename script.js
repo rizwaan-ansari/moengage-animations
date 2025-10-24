@@ -31,8 +31,8 @@ function createTypingAnimation(timeline, splitData, startTime = 0) {
         { 
             opacity: 1, 
             x: 0, 
-            duration: 0.3, 
-            stagger: 0.03,
+            duration: 0.2, 
+            stagger: 0.02,
             ease: "power1.out" 
         },
         startTime
@@ -41,14 +41,14 @@ function createTypingAnimation(timeline, splitData, startTime = 0) {
         opacity: 1,
         x: 0,
         scale: 1,
-        duration: 0.2,
+        duration: 0.15,
         ease: "power1.out"
     }, "-=0.1")
     .to(splitData.splitTextAfter.chars, {
         opacity: 1,
         x: 0,
-        duration: 0.3,
-        stagger: 0.03,
+        duration: 0.2,
+        stagger: 0.02,
         ease: "power1.out"
     }, "-=0.05");
     
@@ -61,9 +61,9 @@ function createTypingExitAnimation(timeline, splitData, startTime) {
         {
             opacity: 0,
             x: 10,
-            duration: 0.3,
+            duration: 0.2,
             ease: "power1.in",
-            stagger: 0.015
+            stagger: 0.01
         }, 
         startTime
     );
@@ -152,14 +152,14 @@ function initScrollAnimations() {
     animationTimeline.to([merlinAiColumnsSetOne, merlinAiColumnsSetTwo, merlinAiColumnsSetThree], {
         y: 0, 
         opacity: 1,
-        duration: 1.0,
-        stagger: 0.2,
+        duration: 0.6,
+        stagger: 0.1,
         ease: "power2.out"
     }, "-=0.2")
     
     .to(merlinAiContainerTrigger, {
         maskImage: "linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 100%)",
-        duration: 1.2,
+        duration: 0.8,
         ease: "power2.out"
     }, "-=0.3");
     
@@ -169,43 +169,43 @@ function initScrollAnimations() {
         const highlightBorders = card.querySelectorAll('.merlin-ai-card-border-highlight');
         const blurEffects = card.querySelectorAll('.merlin-ai-card-bg-blur');
         
-        const cardStartPosition = "+=" + (index === 0 ? 0.2 : 0.1);
+        const cardStartPosition = "+=" + (index === 0 ? 0.1 : 0.05);
         
         animationTimeline.to(card, {
             transformOrigin: "top center",
             scale: 1.08,
             zIndex: 1000,
-            duration: 0.3,
+            duration: 0.2,
             ease: "sine.inOut"
         }, cardStartPosition)
         .to(highlightBorders, {
             opacity: 1,
-            duration: 0.3,
+            duration: 0.2,
             ease: "power2.out"
         }, "<")
         .to(blurEffects, {
             opacity: 1,
             scale: 1.5,
-            duration: 0.3,
+            duration: 0.2,
             ease: "power2.out"
         }, "<")
         
         .to(card, {
             scale: 1,
             zIndex: 1,
-            duration: 0.3,
+            duration: 0.2,
             ease: "power2.in"
-        }, "+=0.3")
+        }, "+=0.2")
         .to(highlightBorders, {
             opacity: 0,
-            duration: 0.3,
+            duration: 0.2,
             ease: "power2.in"
         }, "<")
         .to(blurEffects, {
             opacity: 0,
-            duration: 0.3,
+            duration: 0.2,
             ease: "power2.in"
-        }, "<-0.3");
+        }, "<-0.2");
     });
     
 
@@ -213,51 +213,51 @@ function initScrollAnimations() {
         const highlightBorders = card.querySelectorAll('.merlin-ai-card-border-highlight');
         const blurEffects = card.querySelectorAll('.merlin-ai-card-bg-blur');
         
-        const cardStartPosition = "+=" + (index === 0 ? 0.4 : 0.1);
+        const cardStartPosition = "+=" + (index === 0 ? 0.2 : 0.05);
         
         animationTimeline.to(card, {
             transformOrigin: "bottom center",
             scale: 1.08,
             zIndex: 1000,
-            duration: 0.3,
+            duration: 0.2,
             ease: "sine.inOut"
         }, cardStartPosition)
         .to(highlightBorders, {
             opacity: 1,
-            duration: 0.3,
+            duration: 0.2,
             ease: "power2.out"
         }, "<")
         .to(blurEffects, {
             opacity: 1,
             scale: 1.02,
-            duration: 0.3,
+            duration: 0.2,
             ease: "power2.out"
         }, "<")
         
         .to(card, {
             scale: 1,
             zIndex: 1,
-            duration: 0.3,
+            duration: 0.2,
             ease: "power2.in"
-        }, "+=0.3")
+        }, "+=0.2")
         .to(highlightBorders, {
             opacity: 0,
-            duration: 0.3,
+            duration: 0.2,
             ease: "power2.in"
         }, "<")
         .to(blurEffects, {
             opacity: 0,
-            duration: 0.3,
+            duration: 0.2,
             ease: "power2.in"
-        }, "<-0.3");
+        }, "<-0.2");
     });
     
-    animationTimeline.to({}, { duration: 1.0 })
+    animationTimeline.to({}, { duration: 0.5 })
     .to([merlinAiColumnsSetOne, merlinAiColumnsSetTwo, merlinAiColumnsSetThree], {
         y: 200,
         opacity: 0,
-        duration: 0.8,
-        stagger: 0.15,
+        duration: 0.5,
+        stagger: 0.08,
         ease: "power2.in"
     });
     
@@ -265,7 +265,7 @@ function initScrollAnimations() {
     
     animationTimeline.to(merlinAiContainerTrigger, {
         maskImage: "linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 60%, rgba(255,255,255,0.5) 85%, rgba(255,255,255,0) 100%)",
-        duration: 0.5,
+        duration: 0.3,
         ease: "power2.out"
     });
     
@@ -273,13 +273,13 @@ function initScrollAnimations() {
     animationTimeline.to(merlinAiSecondSetElements, {
         y: 0,
         opacity: 1,
-        duration: 1.0,
-        stagger: 0.2,
+        duration: 0.6,
+        stagger: 0.1,
         ease: "power2.out"
     }, "-=0.5")
     .to(merlinAiContainerTrigger, {
         maskImage: "linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 100%)",
-        duration: 1.2,
+        duration: 0.8,
         ease: "power2.out"
     }, "-=0.6");
     
@@ -287,52 +287,52 @@ function initScrollAnimations() {
         const highlightBorders = card.querySelectorAll('.merlin-ai-card-border-highlight');
         const blurEffects = card.querySelectorAll('.merlin-ai-card-bg-blur');
         
-        const cardStartPosition = "+=" + (index === 0 ? 0.2 : 0.1);
+        const cardStartPosition = "+=" + (index === 0 ? 0.1 : 0.05);
     
         animationTimeline.to(card, {
             transformOrigin: "bottom center",
             scale: 1.08,
             zIndex: 50,
-            duration: 0.3,
+            duration: 0.2,
             ease: "sine.inOut"
         }, cardStartPosition)
         .to(highlightBorders, {
             opacity: 1,
-            duration: 0.3,
+            duration: 0.2,
             ease: "power2.out"
         }, "<")
         .to(blurEffects, {
             opacity: 1,
             scale: 1.5,
-            duration: 0.3,
+            duration: 0.2,
             ease: "power2.out"
         }, "<")
         
         .to(card, {
             scale: 1,
             zIndex: 1,
-            duration: 0.3,
+            duration: 0.2,
             ease: "power2.in"
-        }, "+=0.3")
+        }, "+=0.2")
         .to(highlightBorders, {
             opacity: 0,
-            duration: 0.3,
+            duration: 0.2,
             ease: "power2.in"
         }, "<")
         .to(blurEffects, {
             opacity: 0,
-            duration: 0.3,
+            duration: 0.2,
             ease: "power2.in"
-        }, "<-0.3");
+        }, "<-0.2");
     });
 
-    animationTimeline.to({}, { duration: 1.0 })
+    animationTimeline.to({}, { duration: 0.5 })
     .to(merlinAiSecondSetElements, {
         y: 200,
         opacity: 0,
-        duration: 0.8,
+        duration: 0.5,
         stagger: {
-            amount: 0.6,
+            amount: 0.3,
             from: "end"
         },
         ease: "power2.in"
@@ -342,7 +342,7 @@ function initScrollAnimations() {
     
     animationTimeline.to(merlinAiContainerTrigger, {
         maskImage: "linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 60%, rgba(255,255,255,0.5) 85%, rgba(255,255,255,0) 100%)",
-        duration: 0.5,
+        duration: 0.3,
         ease: "power2.out"
     });
 
