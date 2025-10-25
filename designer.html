@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designer Animation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/MotionPathPlugin.min.js"></script>
+    <script src="/assets/js/SplitText.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="">
+    <section class="bg-gray-600 min-h-screen py-[100px]">
+        <div class="w-[400px] max-w-full min-h-[510px] h-auto mx-auto relative overflow-hidden">
+            <img src="/assets/images/designer/designer-active-cursor.png" alt="designer-active-cursor"
+                id="designer-cursor"
+                class="size-[42px] object-contain absolute bottom-[5%] translate-y-[100px] left-1/2 -translate-x-1/2 z-[60] opacity-0">
+            <div
+                class="absolute pointer-events-none top-3 left-3 right-3 bottom-3 z-20 [mask-image:linear-gradient(180deg,rgba(255,255,255,1)_0%,rgba(153,153,153,0.6)_50%,rgba(153,153,153,0)_100%)]">
+            </div>
+            <img src="/assets/images/designer/designer-panel-box.png" alt="designer-panel-box"
+                class="w-full h-full absolute max-w-[unset] designer-panel-box-1">
+            <img src="/assets/images/designer/designer-panel-box-2.png" alt="designer-panel-box-2"
+                class="w-full h-full max-w-[unset] designer-panel-box-2 opacity-0 inset-0 absolute">
+
+            <!-- Background Blur -->
+            <div
+                class="absolute -top-[18%] -left-[14%] z-50 aspect-[610/753] w-[610px] max-w-full pointer-events-none -rotate-[25deg]">
+                <img src="/assets/images/designer/designer-panel-bg-blur.png" alt="designer-panel-bg-blur"
+                    class="w-full h-full max-w-[unset]">
+            </div>
+            <!-- Top Panel -->
+            <div class="absolute top-6 left-6 right-6">
+                <div class="flex items-center justify-between w-full designer-first-frame-top-panel">
+                    <div class="flex items-center gap-[10px]">
+                        <p class="text-white font-book text-lg tracking-[-0.01em]">Generate image</p>
+                        <img src="/assets/images/designer/generate-image-switcher.png" alt="generate-image-switcher"
+                            class="w-[35px] h-5 object-contain">
+                    </div>
+                    <div class="border border-[#877BFF] rounded-[4px] max-w-[50px] opacity-20">
+                        <p class="px-3 inline-flex items-center justify-center text-sm tracking-[-0.01em] text-white">
+                            v2.0</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Top Panel -->
+            <div class="absolute top-6 left-4 right-6">
+                <div class="flex items-center justify-between w-full designer-second-frame-top-panel opacity-0">
+                    <div class="flex items-center">
+                        <div class="w-[42px] h-[42px]">
+                            <video class="w-full h-full object-contain input-orb-video" autoplay loop muted
+                                playsinline>
+                                <source src="assets/images/designer/input-orb-2.webm" type="video/webm">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <p class="text-white inline-flex font-book text-lg tracking-[-0.01em] designer-second-frame-top-panel-title overflow-clip relative">Generating image...</p>
+                    </div>
+                    <img src="/assets/images/designer/designer-share-icon.png" alt="designer-share-icon" class="size-4 object-contain designer-share-icon opacity-10">
+                </div>
+            </div>
+
+            <div class="absolute left-6 bottom-6">
+                <div class="flex items-center gap-2 designer-input-group-title">
+                    <p class="inline-flex text-sm text-[#FFFFFFCC]">Image description</p>
+                    <img src="/assets/images/designer/designer-info-icon.svg" alt="designer-info-icon"
+                        class="w-[14px] h-[14px] object-contain">
+                </div>
+                <div class="designer-input-group relative gap-x-3 mt-4 flex items-end">
+                    <!-- Input container start -->
+                    <div class="designer-input-container min-w-[275px] w-[calc(100%_-_100px)] min-w-[400px]:w-[calc(100%_-_96px)] relative min-w-[400px]:min-w-[283px] ">
+                        <div class="absolute -inset-[1px] rounded-xl z-10 opacity-85 designer-input-gradient-green"
+                            style="background: linear-gradient(180deg, rgba(2, 201, 118, 0.8) 87.96%, rgba(60, 210, 255, 0.5) 96.27%);">
+                        </div>
+                        <div class="absolute -inset-[1px] rounded-xl copywriter-input-gradient-white"
+                            style="background: linear-gradient(180deg, rgba(255, 255, 255, 0) 33.81%, #FFFFFF 88.99%);">
+                        </div>
+                        <div
+                            class="min-h-[56px] transition-all duration-300 bg-[#110922] rounded-[11px] relative z-20 pl-[52px] pr-6 flex items-center overflow-clip py-2">
+                            <div class="w-[48px] h-[48px] absolute left-0 -top-[1px]">
+                                <video class="w-full h-full object-contain input-orb-video" autoplay loop muted
+                                    playsinline>
+                                    <source src="assets/images/designer/input-orb-2.webm" type="video/webm">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <p
+                                class="designer-input-text-placeholder absolute left-[52px] top-1/2 -translate-y-1/2 text-white/40 text-base z-10 overflow-clip">
+                                Ask anything...</p>
+                            <p class="designer-input-text text-white text-base max-[399px]:text-sm relative z-10 overflow-clip">Generate a
+                                banner image for a travel booking site promoting summer beach vacations. Include the
+                                text "All inclusive 3D/4N beach vacation starting at 540 USD."</p>
+                        </div>
+                    </div>
+                    <!-- Input container end -->
+                </div>
+            </div>
+            <!-- Bottom  Panel End -->
+             <!-- Send button container start -->
+             <div class="absolute  bottom-6 max-[399px]:right-5 right-6 designer-send-button border border-white bg-[#110922] rounded-[12px]">
+                <div class="absolute designer-send-button-border -inset-1px z-[-1] opacity-80"
+                    style="background: linear-gradient(180deg, rgba(255,255,255,0.9) 13.33%, rgba(255,255,255,0.6) 29.83%);">
+                </div>
+                
+                 <div class="designer-image-final-one opacity-0 inset-0 absolute min-[399px]:w-[calc(100%_-_2px)] w-full min-[399px]:h-[calc(100%_-_4px)] h-full min-[399px]:top-1 top-0 rounded-[4px] z-[100]">
+                    <img src="/assets/images/designer/designer-generated-image-one.png" alt="designer-generated-image-one" class="w-full h-full max-[399px]:object-cover max-[399px]:object-left object-contain rounded-[4px] max-w-[unset] designer-image-clip">
+                 </div>
+                 <div class="designer-image-final-one-blur opacity-0 inset-0 absolute min-[399px]:w-[calc(100%_-_2px)] w-full min-[399px]:h-[calc(100%_-_4px)] h-full min-[399px]:top-1 top-0 rounded-[4px] z-[110]">
+                    <img src="/assets/images/designer/designer-generated-image-one-blur.png" alt="designer-generated-image-one-blur" class="w-full h-full max-[399px]:object-cover object-contain rounded-[4px] max-w-[unset] designer-image-blur-clip">
+                    <img src="/assets/images/designer/designer-image-loading-icon.png" alt="designer-image-loading-icon" class="w-[235px] h-[235px] object-contain max-w-[unset] designer-image-loading-icon absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                 </div>
+                 <!-- Second Generated Image -->
+                 <div class="designer-image-final-two opacity-0 inset-0 absolute min-[399px]:w-[calc(100%_-_2px)] w-full min-[399px]:h-[calc(100%_-_4px)] h-full min-[399px]:top-1 top-0 rounded-[4px] z-[100]">
+                    <img src="/assets/images/designer/designer-generated-image-two.png" alt="designer-generated-image-two" class="w-full h-full max-[399px]:object-cover max-[399px]:object-left object-contain rounded-[4px] max-w-[unset] designer-image-clip">
+                 </div>
+                 <div class="designer-image-final-two-blur opacity-0 inset-0 absolute w-[calc(100%_-_2px)] h-[calc(100%_-_4px)] top-1 rounded-[4px] z-[110]">
+                    <img src="/assets/images/designer/designer-generated-image-two-blur.png" alt="designer-generated-image-two-blur" class="w-full h-full max-[399px]:object-cover object-contain rounded-[4px] max-w-[unset] designer-image-blur-clip">
+                    <img src="/assets/images/designer/designer-image-loading-icon.png" alt="designer-image-loading-icon" class="w-[235px] h-[235px] object-contain max-w-[unset] designer-image-loading-icon absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                 </div>
+                 
+                <div
+                    class="size-[56px] z-10 flex items-center justify-center rounded-[11px] relative">
+                    <img src="/assets/images/designer/designer-input-arrow-inactive.png"
+                        class="w-[26px] designer-send-button-icon h-auto relative z-10" alt="" />
+                    <div
+                        class="h-8 w-8 color-[#02C976] designer-button-input-loader absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 scale-75">
+                        <svg width="100%" height="100%" viewBox="0 0 200 200" color="#3f51b5" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="spinner-custom-gradient" x1="100%" y1="48%" x2="0%"
+                                    y2="48%">
+                                    <stop offset="0%" stop-color="rgb(2, 201, 118)" stop-opacity="0.8" />
+                                    <stop offset="50%" stop-color="rgb(60, 210, 255)" stop-opacity="0.5" />
+                                    <stop offset="100%" stop-color="rgb(2, 201, 118)" stop-opacity="0.5" />
+                                </linearGradient>
+                            </defs>
+                            <g stroke-width="20">
+                                <path stroke="url(#spinner-custom-gradient)"
+                                    d="M 14 100 A 86 86 0 0 1 186 100" />
+                                <path stroke="url(#spinner-custom-gradient)"
+                                    d="M 186 100 A 86 86 0 0 1 14 100" />
+                                <path stroke="currentColor" stroke-linecap="round"
+                                    d="M 14 100 A 86 86 0 0 1 14 98" />
+                            </g>
+                            <animateTransform from="0 0 0" to="360 0 0" attributeName="transform" type="rotate"
+                                repeatCount="indefinite" dur="1300ms" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute max-[399px]:bottom-6 bottom-5 max-[399px]:left-5 left-[26px] designer-bottom-buttons-group">
+                <div class="flex items-center gap-4">
+                    <div class="bg-transparent opacity-50 rounded-[8px] border border-[#503591] designer-regenerate-button">
+                        <div class="px-10 py-3 w-full max-w-[164px]">
+                            <p class="text-white text-base font-medium text-center max-[399px]:text-xs">Regenerate</p>
+                        </div>
+                    </div>
+                    <div class="bg-transparent opacity-50 rounded-[8px] border border-[#503591] designer-save-button">
+                        <div class="px-16 py-3 w-full max-w-[164px] max-[399px]:px-10">
+                            <p class="text-white text-base font-medium text-center max-[399px]:text-xs">Save</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="/assets/js/designerAnimation.js"></script>
+
+</html>
