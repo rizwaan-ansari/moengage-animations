@@ -64,7 +64,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
     gsap.set(designerCursor, { opacity: 0, scale: 0.8 });
 
-    const timeline = gsap.timeline({  repeatDelay: 2, });
+    const timeline = gsap.timeline({  repeatDelay: 2, repeat: -1 });
+    
+    // Add callback to recalculate width on each repeat
+    timeline.call(maintainInputWidth, [], ">");
 
     timeline
         .set(designerCursor, { opacity: 0, scale: 0.8, y: 200 })
