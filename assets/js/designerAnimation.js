@@ -432,3 +432,5 @@ document.addEventListener('DOMContentLoaded', () => {
         timeline.restart();
     });
 });
+
+// 974 max-w , h - 470
